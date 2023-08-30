@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0 0 15px white;
+    color: #333;
+    background-image: url(/Margits-Lessons/DecisionMakingApp2.0/magical-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label {
+    display: inline-block;
+    width: 50%;
+    color:rgb(225, 225, 225);
+    margin-left: 25px;
+}
+
+input, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input {
+    margin-top: 5px;
+    padding: 7px;
+}
+
+input[type="text"] {
+    background-color: rgb(230, 254, 254);
+    border-radius: 7px;
+    border-color: rgb(114,34, 64);
+}
+
+div {
+    padding: 15px 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    padding: 40px;
+    color: rgb(230, 254, 254);
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 22px;
+    padding: 10px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    padding: 10px;
+    font-size: 32px;
+    color: rgb(114,34, 64);
+}
+
+button {
+    background-color: rgb(114,34, 64);
+    padding: 15px 25px;
+    border-radius: 4px;
+    box-shadow: none;
+    border: none;
+    color: rgb(225, 225, 225);
+    box-shadow: 0 0 10px rgb(181, 76, 198);
+}
+
+/* - - - Classes - - - */
+
+.main-section {
+    height: 100vh;
+}
+
+.response {
+    margin: 30px 15%;
+    background-color: rgb(225, 225, 225);
+    border-radius: 15px;
+    opacity: 0.75;
+}
+
+.center {
+    margin: auto;
+    width: 75%;
+}
+
+/* - - - Automation - - - */
+
+.fade-in-fast {
+    animation: fadeIn 2s;
+}
+
+.fade-in-slow {
+    animation: fadeInSlow 10s ease-in 5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0 };
+    100% { opacity: 1 };
+}
+
+@keyframes fadeInSlow {
+    0% { opacity: 0 };
+    50% { opacity: 0.01 };
+    100% { opacity: 1 };
+}
+
+/* - - - Toggle show/hide - - - */
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}

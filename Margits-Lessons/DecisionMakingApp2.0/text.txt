@@ -1,0 +1,10 @@
+Decision making App
+
+Modify you decision making app so, that it takes input from the page (input element) and prints the answer to the screen.
+
+Make it as magical as possible!
+
+1. user enters question in the UI (use input)
+2. random number is given as an answer
+3. create at least 5 (10) answers and use switch
+4. make a new project and make it magical!
