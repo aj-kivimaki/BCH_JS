@@ -2,38 +2,54 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: 0 0 15px white;
     color: #333;
-    background-image: url(/Margits-Lessons/DecisionMakingApp2.0/magical-background.jpeg);
+    background-image: url(/Margits-Lessons/DecisionMakingApp2.0/resources/magical-background.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #000;
 }
 
 label {
     display: inline-block;
     width: 50%;
     color:rgb(225, 225, 225);
-    margin-left: 25px;
+    font-size: 28px;
 }
 
-input, button {
+input,
+button,
+textarea {
     font-family: inherit;
     font-size: inherit;
 }
 
-input {
-    margin-top: 5px;
-    padding: 7px;
-}
-
-input[type="text"] {
-    background-color: rgb(230, 254, 254);
+input[type="text"],
+textarea {
+    background-color: rgb(231, 211, 255);
+    color: rgb(255, 130, 151);
     border-radius: 7px;
     border-color: rgb(114,34, 64);
+    padding: 7px;
+    opacity: 0.8;
+    width: 200px;
+}
+
+textarea {
+    resize: none;
+    vertical-align: top;
+}
+
+input[type="text"]:focus,
+button:focus,
+textarea:focus {
+    outline: 5px ridge rgb(92, 20, 98);
 }
 
 div {
@@ -44,30 +60,29 @@ h1 {
     text-align: center;
     font-size: 48px;
     padding: 40px;
-    color: rgb(230, 254, 254);
     margin-bottom: 30px;
+    color: rgb(230, 254, 254);
 }
 
 h2 {
     font-size: 22px;
-    padding: 10px;
     text-align: center;
+    padding: 10px;
 }
 
 p {
-    text-align: center;
-    padding: 10px;
     font-size: 32px;
+    text-align: center;     
+    padding: 10px;
     color: rgb(114,34, 64);
 }
 
 button {
-    background-color: rgb(114,34, 64);
     padding: 15px 25px;
-    border-radius: 4px;
-    box-shadow: none;
-    border: none;
+    background-color: rgb(114,34, 64);
     color: rgb(225, 225, 225);
+    border: none;
+    border-radius: 4px;
     box-shadow: 0 0 10px rgb(181, 76, 198);
 }
 
@@ -78,39 +93,25 @@ button {
 }
 
 .response {
-    margin: 30px 15%;
     background-color: rgb(225, 225, 225);
-    border-radius: 15px;
     opacity: 0.75;
+    margin: 30px 15%;
+    border-radius: 15px;
 }
 
 .center {
     margin: auto;
-    width: 75%;
+    width: 70%;
 }
 
-/* - - - Automation - - - */
-
-.fade-in-fast {
-    animation: fadeIn 2s;
+.errorMsg {
+    color: white;
 }
 
-.fade-in-slow {
-    animation: fadeInSlow 10s ease-in 5s;
+.text-stroke {
+    -webkit-text-stroke: 1px #fff;
+    color: rgb(114,34, 64);
 }
-
-@keyframes fadeIn {
-    0% { opacity: 0 };
-    100% { opacity: 1 };
-}
-
-@keyframes fadeInSlow {
-    0% { opacity: 0 };
-    50% { opacity: 0.01 };
-    100% { opacity: 1 };
-}
-
-/* - - - Toggle show/hide - - - */
 
 .hide {
     visibility: hidden;

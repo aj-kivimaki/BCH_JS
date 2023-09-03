@@ -1,27 +1,32 @@
-/* const hello = () => {
-    let userName;
-    let userQuestion;
-
-    if (userName === '') {
-        console.log('Hello!');
-        console.log(`Anonymous asked: ${userQuestion}`);
-    } else {
-        console.log(`Hello ${userName}!`);
-        console.log(`${userName} asked: ${userQuestion}`);
-    }
-} */
 
 const randomAnswer = () => {
+    // selects places where to display welcome the message and the answer
     const welcome = document.querySelector('#welcome');
     const answer = document.querySelector('#answer');
+
+    // selects the place where to show the error message
+    const errorMsg = document.querySelector('#errorMsg');
+
+    // selects the areas where the welcome and answer messages will show (hidden before the answer)
     const show = document.querySelector('.hide');
 
+    // saves the inputs
     const firstName = document.querySelector('#firstName').value;
     const question = document.querySelector('#question').value;
     
-    let hello = `Welcome ${firstName}! You were wondering: ${question}?`;
+    // checks if either one of the inputs are empty, if so, error message is shown
+    if (firstName === '' | question === '') {
+        document.querySelector('body').style.backdropFilter = `blur(${7}px)`;
+        errorMsg.textContent = 'Please, provide both your name and a question!';
+        document.querySelector('#button').textContent = 'Refresh the page and try again!';
+        return;
+    }
+
+    // creating the welcome message
+    let hello = `Welcome ${firstName}! You were wondering: "${question}?"`;
     welcome.textContent = hello;
 
+    // generates the random number and the answer
     let text;
     let randomNumber = Math.floor(Math.random() * 10);
 
@@ -57,6 +62,9 @@ const randomAnswer = () => {
             text = 'Be You, Unapologetically: Make choices that align with your true self.';
             break;
     }
+    // inserts the answer to be ready for revealing
     answer.textContent = text;
-    show.classList.toggle('show').click();
+
+    // shows the welcome message and the anser, you can click the button only once before reloading the page
+    show.classList.add('show');
 }

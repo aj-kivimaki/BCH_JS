@@ -8,18 +8,38 @@
   </head>
   <body>
     <section class="main-section">
-      <h1>Decision Making App</h1>
-      <div class="center">
-        <label for="firstName">What is your name?</label>
-        <input type="text" id="firstName" placeholder="first name" required />
+      <h1 class="text-stroke">Decision Making App</h1>
+
+      <div>
+        <div class="errorMsg">
+          <h2 id="errorMsg"></h2>
+        </div>
+        <div class="center">
+          <label class="text-stroke" for="firstName">Who are you?</label>
+          <input type="text" id="firstName" placeholder="What is your name?" />
+        </div>
       </div>
-      <div class="center">
-        <label for="question">What is on your mind?</label>
-        <input type="text" id="question" placeholder="question" required />
+
+      <div class="center question">
+        <label class="questionLabel text-stroke" for="question"
+          >Tell me, what is troubling you?</label
+        >
+        <textarea
+          name="questionArea"
+          id="question"
+          cols="75"
+          rows="5"
+          placeholder="What is on your mind?"
+        ></textarea>
       </div>
+
       <div class="center">
-        <button onclick="randomAnswer()">What should you do?</button>
+        <!-- makes it work when clicked, but only once -->
+        <button id="button" onclick="randomAnswer(); this.onclick=null;">
+          What should you do?
+        </button>
       </div>
+
       <div class="hide">
         <div class="response">
           <h2 id="welcome" class="fade-in-fast"></h2>
