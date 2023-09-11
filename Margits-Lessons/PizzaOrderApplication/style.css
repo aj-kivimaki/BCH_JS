@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: #333;
+}
+
+/* header */
+
+header {
+    height: 90vh;
+    background-image: url("./images/pizza.jpeg");
+    background-size: cover;
+}
+
+header h1 {
+    padding-top: 100px;
+    margin: 0 15px;
+    font-size: 7vh;
+    text-align: center;
+    color: white;
+}
+
+header h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+/* link down */
+
+.linkDown {
+    height: max(10vh, 70px);
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.linkDown h2 {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 25px;
+}
+
+.linkDown a {
+    text-decoration: none;
+    color: #000;
+}
+
+#pizzaSiza,
+#toppings,
+#delivery {
+    scroll-snap-align: start;
+}
+
+/* main */
+
+main {
+    min-height: 90vh;
+}
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-padding {
+    min-height: 90vh;
+}
+
+#pizzaSize {
+    background-image: url(./images/table.jpg);
+    background-size: cover;
+}
+
+#toppings {
+    background-image: url(./images/pizza-oven.jpg);
+    background-size: cover;
+}
+
+#delivery {
+    background-image: url(./images/delivery.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* stickyPrice */
+
+#stickyPrice {
+    margin: 30px;
+    padding: 10px;
+    height: 50px;
+    width: 180px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.selections {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    padding: 5vw;
+}
+
+.right {
+    justify-content: end;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+#stickyPrice h2 {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.priceContainer {
+    width: 80px;
+}
+
+.bgc {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.7;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.bgc-toppings {
+    margin: 5px;
+    height: 350px;
+}
+
+/* sections */
+
+main h2 {
+    font-size: 26px;
+    font-weight: normal;
+}
+
+main h3 {
+    font-size: 18px;
+    margin: 20px;
+    font-weight: normal;
+}
+
+.minWidth {
+    min-width: 120px;
+}
+
+.minWidth2 {
+    min-width: 200px;
+}
+
+.minWidth,
+.minWidth2 {
+    margin: 15px;
+}
+
+.customerName {
+    margin-top: 20px;
+}
+
+#delivery {
+    padding: 150px 0 0 60px;
+    height: 100vh;
+}
+
+#message {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    padding: 5vw;
+    display: none;
+}
+
+.message {
+    margin: 0 auto;
+}
+
+/* button */
+
+button {
+    padding: 20px 60px;
+    margin: 20px 0;
+    background-color: rgb(117, 66, 76);
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button:hover {
+    color: white;
+}
+
+/* radio / checkbox */
+
+input,
+select {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+    accent-color: rgb(117, 66, 76);
+}
+
+option {
+    accent-color: rgb(117, 66, 76);
+}
+
+input[type="text"],
+#deliveryOptions,
+button {
+    width: 250px;
+}
+
+@media (max-width: 640px) {
+    .section-padding,
+    #delivery {
+        padding-top: 110px;
+    }
+}

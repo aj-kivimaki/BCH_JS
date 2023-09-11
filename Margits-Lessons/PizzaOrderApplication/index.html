@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Pizza Order Application</title>
+  </head>
+  <body>
+    <header>
+      <h1>Create your own Fantasy pizza!</h1>
+    </header>
+
+    <section class="linkDown">
+      <a href="#pizzaSize"><h2>Serving size</h2></a>
+    </section>
+
+    <main>
+      <!-- price -->
+      <div class="flexContainer right">
+        <section id="stickyPrice" class="flexContainer">
+          <div>
+            <h2>Total:</h2>
+          </div>
+          <div class="priceContainer">
+            <h2 id="totalPrice">0.00</h2>
+          </div>
+        </section>
+      </div>
+
+      <!-- pizza size -->
+      <div class="flexContainer" id="pizzaSize">
+        <section class="section-padding selections" onclick="getSizePrice()">
+          <div class="bgc">
+            <div class="minWidth2">
+              <input
+                type="radio"
+                id="twoServings"
+                name="servingSize"
+                value="7.50"
+              />
+              <label for="twoServings">2 servings for 7,50 €</label>
+            </div>
+            <div class="minWidth2">
+              <input
+                type="radio"
+                id="fourServings"
+                name="servingSize"
+                value="10.50"
+              />
+              <label for="fourServings">4 servings for 10,50 €</label>
+            </div>
+            <div class="minWidth2">
+              <input
+                type="radio"
+                id="sixServings"
+                name="servingSize"
+                value="12.50"
+              />
+              <label for="sixServings">6 servings for 12,50 €</label>
+            </div>
+            <div class="minWidth2">
+              <input
+                type="radio"
+                id="eightServings"
+                name="servingSize"
+                value="15.50"
+              />
+              <label for="eightServings">8 servings for 15,50 €</label>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- link down -->
+      <section class="linkDown">
+        <a href="#toppings"><h2>Toppings</h2></a>
+      </section>
+
+      <!-- toppings -->
+      <div class="flexContainer" id="toppings">
+        <section
+          class="flexContainer section-padding selections"
+          onclick="getToppingsPrice()"
+        >
+          <div class="bgc bgc-toppings">
+            <h3>Meat</h3>
+            <div class="minWidth">
+              <input type="checkbox" id="groundBeef" name="groundBeef" />
+              <label for="groundBeef">ground beef</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="kebab" name="kebab" />
+              <label for="kebab">kebab</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="ham" name="ham" />
+              <label for="ham">ham</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="bacon" name="bacon" />
+              <label for="bacon">bacon</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="chicken" name="chicken" />
+              <label for="chicken">chicken</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="pepperoni" name="pepperoni" />
+              <label for="pepperoni">pepperoni</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="salami" name="salami" />
+              <label for="salami">salami</label>
+            </div>
+          </div>
+
+          <div class="bgc bgc-toppings">
+            <h3>Vegetable</h3>
+            <div class="minWidth">
+              <input type="checkbox" id="pineapple" name="pineapple" />
+              <label for="pineapple">pineapple</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="mushroom" name="mushroom" />
+              <label for="mushroom">mushroom</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="jalapeno" name="jalapeno" />
+              <label for="jalapeno">jalapeno</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="tomato" name="tomato" />
+              <label for="tomato">tomato</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="olive" name="olive" />
+              <label for="olive">olive</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="bellPepper" name="bellPepper" />
+              <label for="bellPepper">bell pepper</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="onion" name="onion" />
+              <label for="onion">onion</label>
+            </div>
+          </div>
+
+          <div class="bgc bgc-toppings">
+            <h3>Cheese</h3>
+            <div class="minWidth">
+              <input type="checkbox" id="blueCheese" name="blueCheese" />
+              <label for="blueCheese">blue cheese</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="feta" name="feta" />
+              <label for="feta">feta</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="mozzarella" name="mozzarella" />
+              <label for="mozzarella">mozzarella</label>
+            </div>
+          </div>
+
+          <div class="bgc bgc-toppings">
+            <h3>Seafood</h3>
+            <div class="minWidth">
+              <input type="checkbox" id="shrimp" name="shrimp" />
+              <label for="shrimp">shrimp</label>
+            </div>
+            <div class="minWidth">
+              <input type="checkbox" id="tuna" name="tuna" />
+              <label for="tuna">tuna</label>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- link down -->
+      <section class="linkDown">
+        <a href="#delivery"><h2>Delivery</h2></a>
+      </section>
+
+      <!-- delivery -->
+      <div class="flexContainer" id="delivery">
+        <div>
+          <div class="deliveryOptions">
+            <label for="deliveryOptions"></label>
+            <select
+              name="deliveryOptions"
+              id="deliveryOptions"
+              required
+              onchange="getDeliveryPrice();"
+            >
+              <option value="0">Delivery</option>
+              <option value="5">Home delivery, +5.00€</option>
+              <option value="0">Eat in</option>
+              <option value="0">Pickup</option>
+            </select>
+          </div>
+
+          <div class="customerName">
+            <label for="customerName"></label>
+            <input
+              type="text"
+              id="customerName"
+              name="customerName"
+              placeholder="First and last name"
+              required
+            />
+          </div>
+
+          <div>
+            <button type="button" onclick="pizzaOrder()">ORDER</button>
+          </div>
+        </div>
+
+        <div class="message">
+          <h3 id="message"></h3>
+        </div>
+      </div>
+    </main>
+
+    <section hidden>
+      <h2>Size: <span id="showSizePrice">0</span></h2>
+      <h2>Toppings: <span id="showToppingsPrice">0</span></h2>
+      <h2>Delivery: <span id="showDeliveryPrice">0</span></h2>
+    </section>
+  </body>
+</html>

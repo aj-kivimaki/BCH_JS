@@ -10,7 +10,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: 0 0 15px white;
     color: #333;
-    background-image: url(/Margits-Lessons/DecisionMakingApp2.0/resources/magical-background.jpeg);
+    background-image: url('./magical-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #000;
@@ -19,7 +19,7 @@ body {
 label {
     display: inline-block;
     width: 50%;
-    color:rgb(225, 225, 225);
+    color: rgb(225, 225, 225);
     font-size: 28px;
 }
 
@@ -78,6 +78,7 @@ p {
 }
 
 button {
+    margin-top: 40px;
     padding: 15px 25px;
     background-color: rgb(114,34, 64);
     color: rgb(225, 225, 225);
