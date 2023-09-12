@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Linear Gradient Generator</title>
+  </head>
+  <body onchange="createGradient()">
+    <div class="left-side">
+      <div class="selection">
+        <h1>Linear Gradient Generator</h1>
+        <div class="colors">
+          <input type="color" id="color1" />
+          <input type="color" id="color2" />
+        </div>
+      </div>
+      <div class="arrows">
+        <div class="top-row">
+          <div>
+            <input
+              checked="checked"
+              type="radio"
+              id="7"
+              name="radio"
+              value="315deg"
+            />
+            <label for="7">↖️</label>
+          </div>
+          <div>
+            <input type="radio" id="8" name="radio" value="360deg" />
+            <label for="8">⬆️</label>
+          </div>
+          <div>
+            <input type="radio" id="1" name="radio" value="45deg" />
+            <label for="1">↗️</label>
+          </div>
+        </div>
+        <div class="middle-row">
+          <div>
+            <input type="radio" id="6" name="radio" value="270deg" />
+            <label for="6">⬅️</label>
+          </div>
+          <div>
+            <input type="radio" id="2" name="radio" value="90deg" />
+            <label for="2">➡️</label>
+          </div>
+        </div>
+        <div class="bottom-row">
+          <div>
+            <input type="radio" id="5" name="radio" value="225deg" />
+            <label for="5">↙️</label>
+          </div>
+          <div>
+            <input type="radio" id="4" name="radio" value="180deg" />
+            <label for="4">⬇️</label>
+          </div>
+          <div>
+            <input type="radio" id="3" name="radio" value="135deg" />
+            <label for="3">↘️</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-side gradient">
+      <div></div>
+    </div>
+  </body>
+</html>
