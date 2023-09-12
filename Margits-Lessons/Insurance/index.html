@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insurance</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Insurance Risk Score</h1>
+    </header>
+
+    <main class="main-container">
+      <form action="">
+        <div class="areas">
+          <div class="input">
+            <label for="firstName">Name: </label>
+            <input
+              type="text"
+              id="firstName"
+              placeholder="first name"
+              required
+            />
+          </div>
+          <div class="input">
+            <label for="age">Age: </label>
+            <input type="number" id="age" placeholder="years" required />
+          </div>
+        </div>
+
+        <div class="areas">
+          <h2>Current health:</h2>
+          <div>
+            <input class="currentHealth" type="checkbox" id="checkbox1" />
+            <label for="checkbox1">Hypertension</label>
+          </div>
+          <div>
+            <input class="currentHealth" type="checkbox" id="checkbox2" />
+            <label for="checkbox2">High Blood Sugar</label>
+          </div>
+          <div>
+            <input class="currentHealth" type="checkbox" id="checkbox3" />
+            <label for="checkbox3">Overweight</label>
+          </div>
+        </div>
+
+        <div class="areas">
+          <h2>Good health habits:</h2>
+          <div>
+            <input class="goodHealthHabit" type="checkbox" id="checkbox4" />
+            <label for="checkbox4"
+              >Regular Exercise: Engaging in physical activity and exercise on a
+              regular basis.</label
+            >
+          </div>
+          <div>
+            <input class="goodHealthHabit" type="checkbox" id="checkbox5" />
+            <label for="checkbox5"
+              >Healthy Diet: Maintaining a balanced and nutritious diet.</label
+            >
+          </div>
+          <div>
+            <input class="goodHealthHabit" type="checkbox" id="checkbox6" />
+            <label for="checkbox6"
+              >Adequate Sleep: Ensuring you get enough restful sleep each
+              night.</label
+            >
+          </div>
+          <div>
+            <input class="goodHealthHabit" type="checkbox" id="checkbox7" />
+            <label for="checkbox7"
+              >Stress Management: Practicing stress-reduction techniques such as
+              meditation or yoga.</label
+            >
+          </div>
+          <div>
+            <input class="goodHealthHabit" type="checkbox" id="checkbox8" />
+            <label for="checkbox8"
+              >Moderate Alcohol Consumption: Consuming alcohol in moderation, if
+              at all.</label
+            >
+          </div>
+          <div>
+            <input class="goodHealthHabit" type="checkbox" id="checkbox9" />
+            <label for="checkbox9"
+              >Non-Smoking: Not smoking or using tobacco products.</label
+            >
+          </div>
+        </div>
+
+        <div class="areas">
+          <h2>Unhealthy habits:</h2>
+          <div>
+            <input class="unhealthyHabit" type="checkbox" id="checkbox10" />
+            <label for="checkbox10"
+              >Smoking: Regularly smoking cigarettes or using tobacco
+              products.</label
+            >
+          </div>
+          <div>
+            <input class="unhealthyHabit" type="checkbox" id="checkbox11" />
+            <label for="checkbox11"
+              >Excessive Alcohol Consumption: Consuming alcohol in large
+              quantities or frequently.</label
+            >
+          </div>
+          <div>
+            <input class="unhealthyHabit" type="checkbox" id="checkbox12" />
+            <label for="checkbox12"
+              >Lack of Exercise: Leading a sedentary lifestyle with little to no
+              physical activity.</label
+            >
+          </div>
+          <div>
+            <input class="unhealthyHabit" type="checkbox" id="checkbox13" />
+            <label for="checkbox13"
+              >Poor Diet: Consistently consuming unhealthy foods high in sugar,
+              fats, and processed ingredients.</label
+            >
+          </div>
+          <div>
+            <input class="unhealthyHabit" type="checkbox" id="checkbox14" />
+            <label for="checkbox14"
+              >Inadequate Sleep: Not getting enough sleep or having irregular
+              sleep patterns.</label
+            >
+          </div>
+          <div>
+            <input class="unhealthyHabit" type="checkbox" id="checkbox15" />
+            <label for="checkbox15"
+              >Drug Use: Engaging in the use of illegal drugs or misusing
+              prescription medications.</label
+            >
+          </div>
+        </div>
+
+        <div class="flex-container">
+          <button>SUBMIT</button>
+          <h2 id="showPoints"></h2>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
