@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -12,19 +14,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
-    width: 30vw;
+    width: 35vw;
     height: 100vh;
-    margin: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #333;
     text-align: center;
 }
 
 .right-side {
-    width: 70vw;
+    width: 65vw;
     height: 100vh;
-    background: linear-gradient(black, white);
 }
 
 .arrow {
@@ -66,7 +65,7 @@ input {
 
 input[type="color"] {
     width: 120px;
-    height: 50px;
+    height: 60px;
 }
 
 input[type="radio"] {
@@ -88,4 +87,14 @@ input[type="radio"] {
 
 .code p {
     padding-top: 20px;
+    font-size: 12px;
+}
+
+.conic label {
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+.conic label:hover {
+    color: orange;
 }

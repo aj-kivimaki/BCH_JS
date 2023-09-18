@@ -9,16 +9,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Linear Gradient Generator</title>
+    <title>Gradient Generator</title>
   </head>
   <body>
     <div class="left-side">
       <div class="selection">
-        <h1>Linear Gradient Generator</h1>
+        <h1>Gradient Generator</h1>
         <h2>Colors</h2>
         <div class="colors">
           <input type="color" id="color1" value="#ff0000" />
-          <input type="color" id="color2" value="#ffff00" />
+          <input type="color" id="color2" value="#000000" />
         </div>
       </div>
       <div class="arrows">
@@ -53,6 +53,12 @@
             >
           </div>
           <div class="arrow">
+            <input type="radio" id="circle" name="direction" value="circle" />
+            <label for="circle">
+              <span class="material-symbols-outlined"> circle </span></label
+            >
+          </div>
+          <div class="arrow">
             <input type="radio" id="2" name="direction" value="90deg" />
             <label for="2"
               ><span class="material-symbols-outlined"> east </span></label
@@ -83,14 +89,20 @@
             >
           </div>
         </div>
+        <div>
+          <div class="conic">
+            <input type="radio" id="conic" name="direction" value="conic" />
+            <label for="conic">CONIC</label>
+          </div>
+        </div>
       </div>
       <div class="code">
         <h3>CSS code</h3>
-        <p id="css-code"></p>
+        <p id="css-code">generate code...</p>
       </div>
     </div>
-    <div id="gradient" class="right-side">
-      <div></div>
+    <div class="right-side">
+      <div id="gradient" class="right-side"></div>
     </div>
   </body>
 </html>
