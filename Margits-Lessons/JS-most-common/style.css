@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    background-color: #d3d3d3;
+    background-color: #fbfbfb;
     font-family: 'Raleway', sans-serif;
     color: #333;
 }
@@ -26,18 +26,24 @@ footer {
     padding: 1rem;
 }
 
+/* unable the header to cover the content */
+section {
+    scroll-margin-block: 60px;
+}
+
 /* header */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 
 header li {
     display: inline-block;
 }
-
 
 /* main */
 
@@ -47,7 +53,57 @@ footer {
     text-align: center;
 }
 
+.bg {
+    background-color: white;
+}
+
+.btn {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: none;
+    padding: 0.5rem 1rem;
+    background-color: orange;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+}
+
+.mobile {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    display: none;
+}
+
 #backToTop {
-    padding: 5px 10px;
-    border-radius: 5x;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+/* media queries */
+
+@media (max-width: 640px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    ul.responsive {
+        display: block;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        top: 65px;
+        width: 100%;
+    }
+
+    ul.responsive li {
+        display: block;
+        margin: 1rem;
+    }
 }
